@@ -1,0 +1,10 @@
+.canvas{
+    text-align: center;
+    margin: 100px auto 100px;
+    width: 80%;
+}
+button{
+    margin: 20px;
+    height: 30px;
+    width: 120px;
+}
