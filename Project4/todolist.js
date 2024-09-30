@@ -1,23 +1,29 @@
-const inputtask = document.getElementById('taskinput')
-const addtaskbutton = document.getElementById('addtaskbutton')
-const tasklist = document.getElementById('tasklist')
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskInput = document.getElementById('taskInput');
+const taskList = document.getElementById('taskList');
 
-addtaskbutton.addEventListener('click', function(){
-    const taskText  = inputtask.value;
-    
-    if(taskText!==""){
+
+addTaskBtn.addEventListener('click', function() {
+    const taskText = taskInput.value;
+
+    if (taskText !== "") {
         const newTask = document.createElement('li');
-        newTask.textContent=taskText;
+        newTask.textContent = taskText;
 
-        const removebtn = document.createElement('button');
-        removebtn.textContent="Remove";
-        removebtn.addEventListener('click', function(){
-            tasklist.removeChild(newTask);
+        // Add remove button for each task
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = "Remove";
+        removeBtn.addEventListener('click', function() {
+            taskList.removeChild(newTask);
         });
-        newTask.appendChild(removebtn);
-        tasklist.appendChild(newTask);
 
-        inputtask.value="";
+        newTask.appendChild(removeBtn);
+        taskList.appendChild(newTask);
 
+        // Clear input field
+        taskInput.value = "";
     }
-})
+    else{
+        alert("Please enter a task")
+    }
+});
