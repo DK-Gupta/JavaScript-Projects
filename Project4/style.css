@@ -1,5 +1,7 @@
-#Input{
-    align-items: center;
-    margin: 50px;
-    
+#taskList li{
+    margin: 20px;
+}
+#taskInput{
+    align-content: center;
+    margin: 0px;
 }
