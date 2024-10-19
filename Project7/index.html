@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="style.css">
 <body>
-    <div class="top" style="text-align: center; margin: 20px;">
-    <h3>Search for movie name</h3>
-    <input id="input" type="text" placeholder="Enter the movie name!">
-    <button id="search">Search</button>
-    <p id="error" style="margin: 10px;"></p>
+    <div class="container">
+        <header class="header">
+            <h1>Movie Finder</h1>
+            <input id="input" type="text" placeholder="Enter movie name...">
+            <button id="search">Search</button>
+            <p id="error" class="error-message"></p>
+        </header>
+
+        <button id="dw" class="dark-toggle">Toggle Dark/Light Mode</button>
+
+        <section id="moviecontainer" class="movie-list"></section>
     </div>
-    <button id="dw" style="margin-left: 1200px;">Dark/White</button>
-    <figure id="moviecard" class="poster" style="margin: 200px;">
-        
-        <div id="moviecontainer" class="movie-list" style="display: flex; flex-wrap: wrap; gap:20px; justify-content: center;">
-        </div>
-    </figure>
-    
+
+    <script src="movies.js"></script>
 </body>
-<script src="movies.js"></script>
 </html>
